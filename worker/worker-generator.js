@@ -10,7 +10,7 @@ const redirectURI = 'https://example.com';
 const jsURL = 'https://github.com/ivanarya007/GIndex-Working/raw/master/worker/worker-generator.js';
 
 async function handleRequest(request) {
-    let title = getParameterByName(request.url, 'site_name') || 'Bhadoo Drive Index';
+    let title = getParameterByName(request.url, 'site_name') || 'Ivan Drive Index';
     let auth_code = getParameterByName(request.url, 'auth_code');
     let root = getParameterByName(request.url, 'root') || 'root';
     let user = getParameterByName(request.url, 'user') || '';
