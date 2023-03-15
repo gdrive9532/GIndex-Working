@@ -17,8 +17,8 @@ const authConfig = {
     "refresh_token": "", // Authorize token
     "service_account": false, // true if you're using Service Account instead of user account
     "service_account_json": randomserviceaccount, // don't touch this one
-    "files_list_page_size": 50,
-    "search_result_list_page_size": 50,
+    "files_list_page_size": 2000,
+    "search_result_list_page_size": 2000,
     "enable_cors_file_down": false,
     "enable_password_file_verify": true, // support for .password file
     "direct_link_protection": false, // protects direct links with Display UI
