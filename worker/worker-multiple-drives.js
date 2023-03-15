@@ -1,16 +1,5 @@
-/*  ░██████╗░██████╗░██╗░░░░░░░░██╗░██████╗░░░░█████╗░██████╗░░██████╗░
-    ██╔════╝░██╔══██╗██║░░░░░░░░██║██╔════╝░░░██╔══██╗██╔══██╗██╔════╝░
-    ██║░░██╗░██║░░██║██║░░░░░░░░██║╚█████╗░░░░██║░░██║██████╔╝██║░░██╗░
-    ██║░░╚██╗██║░░██║██║░░░██╗░░██║░╚═══██╗░░░██║░░██║██╔══██╗██║░░╚██╗
-    ╚██████╔╝██████╔╝██║██╗╚█████╔╝██████╔╝██╗╚█████╔╝██║░░██║╚██████╔╝
-    ░╚═════╝░╚═════╝░╚═╝╚═╝░╚════╝░╚═════╝░╚═╝░╚════╝░╚═╝░░╚═╝░╚═════╝░
-                             v 2.2.3
-A Script Redesigned by Parveen Bhadoo from GOIndex at https://gitlab.com/GoogleDriveIndex/Google-Drive-Index */
 
-// WARNING WARNING WARNING
-// This Script doesn't fully support Folder ID (search won't work), use root or Shared Drive ID only
 
-// add multiple serviceaccounts as {}, {}, {}, random account will be selected by each time app is opened.
 const serviceaccounts = [
 {}
 ];
@@ -22,7 +11,7 @@ const video_domain_for_dl = video_domains_for_dl[Math.floor(Math.random()*video_
 const blocked_region = ['']; // add regional codes seperated by comma, eg. ['IN', 'US', 'PK']
 const blocked_asn = []; // add ASN numbers from http://www.bgplookingglass.com/list-of-autonomous-system-numbers, eg. [16509, 12345]
 const authConfig = {
-    "siteName": "Bhadoo Drive Index", // Website name
+    "siteName": "Iva Cloud", // Website name
     "client_id": "", // Client id from Google Cloud Console
     "client_secret": "", // Client Secret from Google Cloud Console
     "refresh_token": "", // Authorize token
@@ -37,14 +26,14 @@ const authConfig = {
     "enable_auth0_com": false, // follow guide to add auth0.com to secure index with powerful login based system
     "roots":[
       {
-          "id": "root",
+          "id": "",
           "name": "Drive One",
           "protect_file_link": false,
          // "auth": {"username":"password"} /* Remove double slash before "auth" to activate id password protection */
       },
       {
           "id": "",
-          "name": "Drive Two",
+          "name": "Allen Drive 2",
           "protect_file_link": false,
          // "auth": {"username":"password", "username1":"password1"} /* Remove double slash before "auth" to activate id password protection */
       },
@@ -58,24 +47,6 @@ const authConfig = {
           logoutUrl: "", // your domain logout page eg. https://example.com, add this in auth0.com too
     }
 
-
-
-
-/*
-███████╗██████╗░██╗████████╗  ████████╗██╗░░██╗███████╗░██████╗███████╗
-██╔════╝██╔══██╗██║╚══██╔══╝  ╚══██╔══╝██║░░██║██╔════╝██╔════╝██╔════╝
-█████╗░░██║░░██║██║░░░██║░░░  ░░░██║░░░███████║█████╗░░╚█████╗░█████╗░░
-██╔══╝░░██║░░██║██║░░░██║░░░  ░░░██║░░░██╔══██║██╔══╝░░░╚═══██╗██╔══╝░░
-███████╗██████╔╝██║░░░██║░░░  ░░░██║░░░██║░░██║███████╗██████╔╝███████╗
-╚══════╝╚═════╝░╚═╝░░░╚═╝░░░  ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚══════╝
-
-██╗░░░██╗░█████╗░██╗░░░░░██╗░░░██╗███████╗░██████╗
-██║░░░██║██╔══██╗██║░░░░░██║░░░██║██╔════╝██╔════╝
-╚██╗░██╔╝███████║██║░░░░░██║░░░██║█████╗░░╚█████╗░
-░╚████╔╝░██╔══██║██║░░░░░██║░░░██║██╔══╝░░░╚═══██╗
-░░╚██╔╝░░██║░░██║███████╗╚██████╔╝███████╗██████╔╝
-░░░╚═╝░░░╚═╝░░╚═╝╚══════╝░╚═════╝░╚══════╝╚═════╝░*/
-
 const uiConfig = {
     "theme": "slate", // switch between themes, default set to slate, select from https://gitlab.com/GoogleDriveIndex/Google-Drive-Index
     "version": "2.2.3", // don't touch this one. get latest code using generator at https://bdi-generator.hashhackers.com
@@ -83,9 +54,9 @@ const uiConfig = {
     "logo_image": true, // true if you're using image link in next option.
     "logo_height": "", // only if logo_image is true
     "logo_width": "100px", // only if logo_image is true
-    "favicon": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.0.20/images/favicon.ico",
+    //"favicon": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.0.20/images/favicon.ico",
     // if logo is true then link otherwise just text for name
-    "logo_link_name": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.0.20/images/bhadoo-cloud-logo-white.svg",
+   //"logo_link_name": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.0.20/images/bhadoo-cloud-logo-white.svg",
     "fixed_header": true, // If you want the footer to be flexible or fixed.
     "header_padding": "80", // Value 80 for fixed header, Value 20 for flexible header. Required to be changed accordingly in some themes.
     "nav_link_1": "Home", // change navigation link name
@@ -106,7 +77,7 @@ const uiConfig = {
     "file_count_alert_class": "alert alert-secondary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
     "contact_link": "https://telegram.dog/Telegram", // Link to Contact Button on Menu
     "copyright_year": "2050", // year of copyright, can be anything like 2015 - 2020 or just 2020
-    "company_name": "Bhadoo Cloud", // Name next to copyright
+    "company_name": "Ivan Cloud", // Name next to copyright
     "company_link": "https://telegram.dog/Telegram", // link of copyright name
     "credit": true, // Set this to true to give us credit
     "display_size": true, // Set this to false to hide display file size
@@ -129,22 +100,6 @@ const uiConfig = {
     "unauthorized_owner_link": "https://telegram.dog/Telegram", // Unauthorized Error Page Link to Owner
     "unauthorized_owner_email": "abuse@telegram.org", // Unauthorized Error Page Owner Email
 };
-
-
-/*
-██████╗░░█████╗░  ███╗░░██╗░█████╗░████████╗  ███████╗██████╗░██╗████████╗
-██╔══██╗██╔══██╗  ████╗░██║██╔══██╗╚══██╔══╝  ██╔════╝██╔══██╗██║╚══██╔══╝
-██║░░██║██║░░██║  ██╔██╗██║██║░░██║░░░██║░░░  █████╗░░██║░░██║██║░░░██║░░░
-██║░░██║██║░░██║  ██║╚████║██║░░██║░░░██║░░░  ██╔══╝░░██║░░██║██║░░░██║░░░
-██████╔╝╚█████╔╝  ██║░╚███║╚█████╔╝░░░██║░░░  ███████╗██████╔╝██║░░░██║░░░
-╚═════╝░░╚════╝░  ╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░  ╚══════╝╚═════╝░╚═╝░░░╚═╝░░░
-
-██████╗░███████╗██╗░░░░░░█████╗░░██╗░░░░░░░██╗
-██╔══██╗██╔════╝██║░░░░░██╔══██╗░██║░░██╗░░██║
-██████╦╝█████╗░░██║░░░░░██║░░██║░╚██╗████╗██╔╝
-██╔══██╗██╔══╝░░██║░░░░░██║░░██║░░████╔═████║░
-██████╦╝███████╗███████╗╚█████╔╝░░╚██╔╝░╚██╔╝░
-╚═════╝░╚══════╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝░░*/
 
 // DON'T TOUCH BELOW THIS UNLESS YOU KNOW WHAT YOU'RE DOING
 var gds = [];
